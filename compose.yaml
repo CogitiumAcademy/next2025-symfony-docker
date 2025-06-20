@@ -48,6 +48,15 @@ services:
     depends_on:
       - database
 
+  adminer:
+    image: adminer
+    container_name: adminer
+    restart: always
+    environment:
+      ADMINER_DEFAULT_SERVER: database
+    ports:
+      - 8002:8080
+
   ###> symfony/mailer ###
   mailer:
     image: axllent/mailpit
