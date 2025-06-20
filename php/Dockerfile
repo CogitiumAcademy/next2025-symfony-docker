@@ -35,10 +35,10 @@ RUN \
     && docker-php-ext-enable apcu \
     
     # Configure l’extension `zip` (si nécessaire, ici redondant avec `libzip-dev` déjà installé)
-    && docker-php-ext-configure zip \
+    #&& docker-php-ext-configure zip \
     
     # Installe l’extension PHP `zip`
-    && docker-php-ext-install zip \
+    #&& docker-php-ext-install zip \
 
     # Supprime le cache des fichiers .deb téléchargés par apt
     && apt-get clean \
